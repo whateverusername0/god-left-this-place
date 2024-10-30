@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Red" Offset="0"/>
+                <GradientStop Color="Yellow" Offset=".25"/>
+                <GradientStop Color="Green" Offset=".5"/>
+                <GradientStop Color="Cyan" Offset=".75"/>
+                <GradientStop Color="Purple" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Label Grid.ColumnSpan="2"
+               Grid.Row="0"
+               FontSize="32"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Content="Are you a raging homosexual?"
+               Foreground="Red"/>
+
+        <Button Grid.Row="1" Grid.Column="0"
+                Height="64" Width="128"
+                FontSize="32"
+                Click="Button_Click"
+                Foreground="Blue">
+            YES!
+        </Button>
+        <Canvas HorizontalAlignment="Center"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="2"
+                x:Name="canva"
+            VerticalAlignment="Center">
+            <Button
+                Height="32" Width="64"
+                MouseEnter="Button_MouseEnter"
+                Click="Button_Click_1"
+                x:Name="sillyButton" Canvas.Left="191" Canvas.Top="144">
+                no.
+            </Button>
+        </Canvas>
+
+    </Grid>
+</Window>
